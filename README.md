@@ -23,7 +23,13 @@ To run any of these scripts, in terminal command line enter: `node script-name.j
 
 **2 ]** Draw the BST with the keys - E A S Y Q U E S T I O N
 
-Presumably would convert the string characters to numerical ASCII 
-(Question: should I then create hash value with the hash function `k Mod m`, too?)
+> Presumably would convert the string characters to numerical ASCII 
+> (Question: should I then create hash value with the hash function `k Mod m`, too?)
 
 ![bst](./draw-bst.jpg)
+
+## 2. Remove the root
+
+Show how the above trees would look like if you deleted the root of each tree. (Draw the trees, no coding needed here.)
+
+![bst](./draw-bst-remove.jpg)
