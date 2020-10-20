@@ -59,7 +59,7 @@ see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-
             7  
 ```
 
-This printout confirms my original diagram is incorrrect. The duplicate characters of `E` and `S` are included in the BST. Per the `insert()` method, if new `key === this.key` node, it proceeds down the right-hand subtree branch...
+> This printout confirms my original diagram is incorrrect. The duplicate characters of `E` and `S` are included in the BST. Per the `insert()` method, if new `key === this.key` node, it proceeds down the right-hand subtree branch...
 ```
   E__________          
  /           \         
