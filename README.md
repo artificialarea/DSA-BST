@@ -4,6 +4,8 @@
 
 To run any of these scripts, in terminal command line enter: `node script-name.js`
 
+
+
 <br />
 
 ## 1. Draw a Binary Search Tree (BST)
@@ -21,12 +23,18 @@ To run any of these scripts, in terminal command line enter: `node script-name.j
                     [7]
 ```
 
+<br />
+
 **2 ]** Draw the BST with the keys - E A S Y Q U E S T I O N
 
-> Presumably would convert the string characters to numerical ASCII 
-> (Question: should I then create hash value with the hash function `k Mod m`, too?)
+> First convert the characters in the string to ASCII numbers, then...
 
 ![bst](./draw-bst.jpg)
+
+
+
+
+<br />
 
 ## 2. Remove the root
 
@@ -35,7 +43,11 @@ Show how the above trees would look like if you deleted the root of each tree. (
 ![bst](./draw-bst-remove.jpg)
 
 
-## 3. Create a BST class (Need help!)
+
+
+<br />
+
+## 3. Create a BST class
 
 see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-class.js)** + **[`create-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/create-bst.js)**
 
@@ -75,3 +87,22 @@ A             S______
          /             
         N        
 ```
+
+<br />
+
+## 4. What does this program do?
+
+Without running this code in your code editor, explain what the following program does. Show with an example the result of executing this program. What is the runtime of this algorithm?
+
+```
+function tree(t){
+    if(!t){
+        return 0;
+    }
+    return tree(t.left) + t.value + tree(t.right)
+}
+```
+
+> I have no friggin idea what this function does. 
+> The output **[`what-does-this-do.js`](https://github.com/artificialarea/DSA-BST/blob/main/what-does-this-do.js)** is `NaN`... which makes me none the wiser.
+> Despite not knowing what this function does, I can still deduce the complexity of the recursive process, the runtime should be O(n) Linear Time, as the function appears to be recursively called for every node in the tree.

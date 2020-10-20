@@ -11,7 +11,6 @@ intArr.forEach(item => {
 });
 
 
-
 // BST2 ///////////////////////////////
 const strBST = new BinarySearchTree;
 const str = 'EASYQUESTION';

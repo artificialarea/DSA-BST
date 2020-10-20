@@ -75,17 +75,6 @@ class BinarySearchTree {
         }
     }
 
-    findBoolean(key) {
-        if (this.key = key) 
-            return true;
-        if (key < this.key && this.left) 
-            return this.left.find(key);
-        if (key < this.key && this.right) 
-            return this.right.find(key);
-        return false;
-    }
-
-
     remove(key) {
         if (this.key == key) {
             if (this.left && this.right) {
@@ -161,6 +150,16 @@ class BinarySearchTree {
             return this;
         }
         return this.left._findMin();    // Q: why isn't it this.right._findMin() ??
+    }
+
+    _findBoolean(key) {
+        if (this.key == key) 
+            return true;
+        if (key < this.key && this.left) 
+            return this.left.find(key);
+        if (key < this.key && this.right) 
+            return this.right.find(key);
+        return false;
     }
 
     _printInOrder() {
