@@ -35,7 +35,7 @@ Show how the above trees would look like if you deleted the root of each tree. (
 ![bst](./draw-bst-remove.jpg)
 
 
-## 3. Create a BST class
+## 3. Create a BST class (Need help!)
 
 see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-class.js)** + **[`create-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/create-bst.js)**
 
@@ -46,70 +46,39 @@ see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-
 > Tried to implement the service object helpers `getRootNode()` and `inorder()` -- per: https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/ -- to print output, but failed: `RangeError: Maximum call stack size exceeded`
 
 
-```
-BinarySearchTree {
-  key: 3,
-  value: undefined,
-  parent: null,
-  left: BinarySearchTree {
-    key: 1,
-    value: null,
-    parent: [Circular],
-    left: null,
-    right: BinarySearchTree {
-      key: 2,
-      value: null,
-      parent: [Circular],
-      left: null,
-      right: null
-    }
-  },
-  right: BinarySearchTree {
-    key: 4,
-    value: null,
-    parent: [Circular],
-    left: null,
-    right: BinarySearchTree {
-      key: 6,
-      value: null,
-      parent: [Circular],
-      left: [BinarySearchTree],
-      right: [BinarySearchTree]
-    }
-  }
-}
-```
+> Was unable to printout full tree in typical ways >_< 
+
+> `console.log(BST);` results in incomplete printout of object, prematurely ending at the 3rd level
+
+> `console.log(JSON.stringify(BST));` results in "TypeError: Converting circular structure to JSON" 
+
+> Thankfully there is a **[`print-bst`](https://www.npmjs.com/package/print-bst)** npm package that enables printout of the full tree and a visual respresentation too!!
 
 ```
-BinarySearchTree {
-  key: 'E',
-  value: undefined,
-  parent: null,
-  left: BinarySearchTree {
-    key: 'A',
-    value: null,
-    parent: [Circular],
-    left: null,
-    right: null
-  },
-  right: BinarySearchTree {
-    key: 'S',
-    value: null,
-    parent: [Circular],
-    left: BinarySearchTree {
-      key: 'Q',
-      value: null,
-      parent: [Circular],
-      left: [BinarySearchTree],
-      right: null
-    },
-    right: BinarySearchTree {
-      key: 'Y',
-      value: null,
-      parent: [Circular],
-      left: [BinarySearchTree],
-      right: null
-    }
-  }
-}
+  __3          
+ /   \         
+1     4__      
+ \       \     
+  2       6__  
+         /   \ 
+        5     9
+             / 
+            7  
+```
+
+This printout confirms my original diagram is incorrrect. The duplicate characters of `E` and `S` are included in the BST. Per the `insert()` method, if new `key === this.key` node, it proceeds down the right-hand subtree branch...
+```
+  E__________          
+ /           \         
+A             S______  
+             /       \ 
+      ______Q         Y
+     /               / 
+    E             __U  
+     \           /     
+      I__       S      
+         \       \     
+          O       T    
+         /             
+        N        
 ```

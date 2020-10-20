@@ -75,6 +75,17 @@ class BinarySearchTree {
         }
     }
 
+    findBoolean(key) {
+        if (this.key = key) 
+            return true;
+        if (key < this.key && this.left) 
+            return this.left.find(key);
+        if (key < this.key && this.right) 
+            return this.right.find(key);
+        return false;
+    }
+
+
     remove(key) {
         if (this.key == key) {
             if (this.left && this.right) {
@@ -152,19 +163,25 @@ class BinarySearchTree {
         return this.left._findMin();    // Q: why isn't it this.right._findMin() ??
     }
 
-    // an attemp to print out all the nodes in console.log (failed)
-    getRootNode() {
-        return this.root;
-    }
-    // Performs inorder traversal of a tree 
-    inorder(node) {
-        if (node !== null) {
-            this.inorder(this.left);
-            console.log(node.data);
-            this.inorder(this.right);
+    _printInOrder() {
+        if (this.left !== null) {
+            this.left._printInOrder();
+        }
+        console.log(this.key);
+        if (this.right !== null) {
+            this.right._printInOrder();
         }
     }
 
+    _printPreOrder() {
+        console.log(this.key);
+        if (this.left !== null) {
+            this.left._printInOrder();
+        }
+        if (this.right !== null) {
+            this.right._printInOrder();
+        }
+    }
 
 }
 
