@@ -115,4 +115,13 @@ function tree(t){
 
 see: **[`height-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/height-class.js)**
 
-> Done... but I don't understand the recursive logic.
+> Done with mentor solution... but I don't understand the recursive logic.
+
+
+<br />
+
+## 6. Is it a BST?
+
+see: **[`is-it-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/is-it-bst.js)**
+
+> Done with mentor solution... but I don't understand the recursive logic.
