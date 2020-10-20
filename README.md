@@ -39,13 +39,6 @@ Show how the above trees would look like if you deleted the root of each tree. (
 
 see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-class.js)** + **[`create-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/create-bst.js)**
 
-> Can't determine if successful, as `console.log` output truncated (see below). 
-
-> Tried to `JSON.stringify()`, but got the error: `TypeError: Converting circular structure to JSON`
-
-> Tried to implement the service object helpers `getRootNode()` and `inorder()` -- per: https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/ -- to print output, but failed: `RangeError: Maximum call stack size exceeded`
-
-
 > Was unable to printout full tree in typical ways >_< 
 
 > `console.log(BST);` results in incomplete printout of object, prematurely ending at the 3rd level
