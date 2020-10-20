@@ -1,5 +1,6 @@
-// const BinarySearchTree = require ('./BST-class');
-const BinarySearchTree = require('print-bst'); // to printout trees
+// Service Object to create Binary Trees
+// const BinarySearchTree = require('./BST-class');
+const BinarySearchTree = require('print-bst'); 
 
 const seedTree = {
     numTree: function(numArr) {
