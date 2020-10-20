@@ -5,11 +5,14 @@ class BinarySearchTree {
         this.parent = parent;
         this.left = null;
         this.right = null;
+
+        this.root = key;
     }
 
     insert(key, value) {
         // If the tree is empty then this key being inserted is the root node of the tree
         if (this.key == null) {
+            this.root = key;
             this.key = key;
             this.value = value;
         }
@@ -147,6 +150,19 @@ class BinarySearchTree {
             return this;
         }
         return this.left._findMin();    // Q: why isn't it this.right._findMin() ??
+    }
+
+    // an attemp to print out all the nodes in console.log (failed)
+    getRootNode() {
+        return this.root;
+    }
+    // Performs inorder traversal of a tree 
+    inorder(node) {
+        if (node !== null) {
+            this.inorder(this.left);
+            console.log(node.data);
+            this.inorder(this.right);
+        }
     }
 
 
