@@ -125,3 +125,10 @@ see: **[`height-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/hei
 see: **[`is-it-bst.js`](https://github.com/artificialarea/DSA-BST/blob/main/is-it-bst.js)**
 
 > Done with mentor solution... but I don't understand the recursive logic.
+
+
+<br />
+
+## 7. 3rd largest node
+
+see: **[`nth-largest-node.js`](https://github.com/artificialarea/DSA-BST/blob/main/nth-largest-node.js)**
