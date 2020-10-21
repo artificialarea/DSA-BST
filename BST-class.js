@@ -149,7 +149,7 @@ class BinarySearchTree {
         if (!this.left) {
             return this;
         }
-        return this.left._findMin();    // Q: why isn't it this.right._findMin() ??
+        return this.left._findMin();  
     }
 
     _findBoolean(key) {

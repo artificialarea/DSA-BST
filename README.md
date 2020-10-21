@@ -103,9 +103,9 @@ function tree(t){
 }
 ```
 
-> I have no friggin idea what this function does. 
-> The output **[`what-does-this-do.js`](https://github.com/artificialarea/DSA-BST/blob/main/what-does-this-do.js)** is `NaN`... which makes me none the wiser.
-> Despite not knowing what this function does, I can still deduce the complexity of the recursive process, the runtime should be O(n) Linear Time, as the function appears to be recursively called for every node in the tree.
+> This recursive function is the sum value of all the descendants of a parent node.
+> Output: **[`what-does-this-do.js`](https://github.com/artificialarea/DSA-BST/blob/main/what-does-this-do.js)** 
+> Complexity: **O(2^n) Exponential Time** since each function calls itself recursively twice with each iteration. 
 
 
 
