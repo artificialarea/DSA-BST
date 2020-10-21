@@ -10,18 +10,11 @@ To run any of these scripts, in terminal command line enter: `node script-name.j
 
 ## 1. Draw a Binary Search Tree (BST)
 
+Binary Tree Images generated via https://www.cs.usfca.edu/~galles/visualization/BST.html
+
 **1 ]** Given the data `3,1,4,6,9,2,5,7`, if you were to insert this into an empty binary search tree, what would the tree look like? (Draw the tree, no coding needed here.)
-```
-            [3]                              
-           /   \                
-        [1]     [4]                 
-           \       \                   
-            [2]     [6]   
-                   /   \                
-                [5]     [9]
-                       /              
-                    [7]
-```
+
+![bst](./diagrams/int-bst-1.png)
 
 <br />
 
@@ -29,7 +22,7 @@ To run any of these scripts, in terminal command line enter: `node script-name.j
 
 > First convert the characters in the string to ASCII numbers, then...
 
-![bst](./draw-bst.jpg)
+![bst](./diagrams/str-bst-1.png)
 
 
 
@@ -40,7 +33,13 @@ To run any of these scripts, in terminal command line enter: `node script-name.j
 
 Show how the above trees would look like if you deleted the root of each tree. (Draw the trees, no coding needed here.)
 
-![bst](./draw-bst-remove.jpg)
+> The diagram generator opted for **Order Predecessor** instead of **Order Successor** method.
+> * **Order Predecessor**: replace vacated parent node with the largest value from the left child node. 
+> * **Order Successor**: replace vacated parent node with the smallest value from the right child node.
+
+![bst](./diagrams/int-bst-2.png)
+
+![bst](./diagrams/str-bst-2.png)
 
 
 
@@ -60,6 +59,7 @@ see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-
 > Thankfully there is a **[`print-bst`](https://www.npmjs.com/package/print-bst)** npm package that enables printout of the full tree and a visual respresentation too!!
 
 ```
+
   __3          
  /   \         
 1     4__      
@@ -69,10 +69,8 @@ see: **[`BST-class.js`](https://github.com/artificialarea/DSA-BST/blob/main/BST-
         5     9
              / 
             7  
-```
 
-> This printout confirms my original diagram is incorrrect. The duplicate characters of `E` and `S` are included in the BST. Per the `insert()` method, if new `key === this.key` node, it proceeds down the right-hand subtree branch...
-```
+
   E__________          
  /           \         
 A             S______  
@@ -85,7 +83,8 @@ A             S______
          \       \     
           O       T    
          /             
-        N        
+        N 
+               
 ```
 
 <br />
